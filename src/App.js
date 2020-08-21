@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import ToDoItem from './components/ToDoItemComponent';
+import AddToDoButton from './components/AddToDoButton'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  state={
+    todos:["yeh kr", "yeh mt kr"]
+  }
+  render(){
+    return(
+      <div className="App">
+        <Navbar/>
+        <ToDoItem todos={this.state.todos}/>
+        <AddToDoButton/>
+      </div>
+    );
+  }
 }
 
 export default App;
