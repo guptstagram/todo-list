@@ -1,9 +1,10 @@
 .add-task-bottom{
-    /* position: sticky; */
-    /* bottom: 20px; */
+    position: absolute;
+    bottom: 0px;
     background-color: #3f51b5;
     padding-top: 1rem;
     padding-bottom: 1px;
+    width:100%;
 }
 
 .left{
